@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felmic | Precision Diagnostics & Medical Supplies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #004a99;
+            --secondary: #00d4ff;
+            --dark: #002a55;
+            --light: #f8fbff;
+            --white: #ffffff;
+            --text: #334155;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        
+        /* Navigation - Text Logo Style */
+        nav {
+            background: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        .text-logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: 3px;
+        }
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 14px; text-transform: uppercase; }
+
+        /* Hero - Using your Lab Interior Image */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(0,42,85,0.7), rgba(0,42,85,0.7)), url('hero-bg.jpg') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 { font-size: 4rem; letter-spacing: 5px; margin-bottom: 20px; font-weight: 900; }
+        .hero p { font-size: 1.4rem; max-width: 800px; margin-bottom: 35px; opacity: 0.9; }
+        .btn { padding: 15px 35px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: 0.3s; text-transform: uppercase; display: inline-block; }
+        .btn-primary { background: var(--secondary); color: var(--dark); }
+        .btn-outline { border: 2px solid white; color: white; margin-left: 15px; }
+
+        /* Hubs Section */
+        section { padding: 100px 10%; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 2.5rem; color: var(--primary); text-transform: uppercase; }
+        
+        .hubs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .hub-card { background: var(--light); padding: 40px; border-radius: 10px; border-top: 5px solid var(--primary); }
+        .hub-card h3 { color: var(--dark); margin-bottom: 15px; }
+
+        /* Supplies Section - Using your Equipment Image */
+        .supply-flex { display: flex; align-items: center; gap: 50px; background: #fff; padding: 100px 10%; }
+        .supply-img { flex: 1; }
+        .supply-img img { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .supply-text { flex: 1; }
+
+        /* Footer */
+        footer { background: var(--dark); color: white; padding: 60px 10%; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .supply-flex { flex-direction: column; }
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="text-logo">FELMIC</a>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#hubs">Laboratory Hubs</a></li>
+            <li><a href="#supplies">Supplies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>FELMIC</h1>
+        <p>Advanced Diagnostics & Medical Supply Excellence since 2022. Serving Kenya with precision and reliability.</p>
+        <div>
+            <a href="#hubs" class="btn btn-primary">Our Hubs</a>
+            <a href="Felmic_Lab_Pricelist_Final_Numbers.pdf" target="_blank" class="btn btn-outline">View Price List</a>
+        </div>
+    </header>
+
+    <section id="hubs">
+        <div class="section-title"><h2>Major Laboratory Hubs</h2></div>
+        <div class="hubs-grid">
+            <div class="hub-card">
+                <h3>Upperhill Hub</h3>
+                <p>Flagship facility specializing in automated clinical chemistry and high-precision diagnostics.</p>
+            </div>
+            <div class="hub-card">
+                <h3>Thika Hub</h3>
+                <p>Major regional hub providing a comprehensive range of testing with rapid turnaround times.</p>
+            </div>
+            <div class="hub-card">
+                <h3>Kileleshwa Hub</h3>
+                <p>Core facility focused on specialized screening and medical supply distribution nodes.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="supply-flex" id="supplies">
+        <div class="supply-img">
+            <img src="supplies.png" alt="Medical Equipment">
+        </div>
+        <div class="supply-text">
+            <h2 style="color: var(--primary); font-size: 2rem; margin-bottom: 20px;">Surgical Instruments & Equipment</h2>
+            <p style="margin-bottom: 20px;">Trusted partner in medical infrastructure. We specialize in the supply of precision surgical instruments and high-end analyzers.</p>
+            <ul style="margin-left: 20px;">
+                <li>Primary instrument supplier for <strong>ABM Hospital</strong>.</li>
+                <li>Renal care equipment and dialysis consumables.</li>
+                <li>Strategic partnership with <strong>Ilara Health</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-grid">
+            <div>
+                <h3 style="color: var(--secondary); margin-bottom: 20px;">FELMIC</h3>
+                <p>Nairobi, Kenya</p>
+                <p>Est. 2022</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px;">Contact Information</h4>
+                <p>Email: felmiclaboratories@outlook.com</p>
+                <p>Phone: 0721431744 / 0720032656</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px;">Partners</h4>
+                <p>Ilara Health | Vision Klik</p>
+                <p>ABM Hospital | Thika Dialysis</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
